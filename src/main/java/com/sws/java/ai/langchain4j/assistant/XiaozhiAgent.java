@@ -9,18 +9,9 @@ import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
 
 @AiService(
         wiringMode = EXPLICIT,
-        chatMemory = "chatMemory",
-        chatMemoryProvider = "chatMemoryProvider",
-        chatModel = "openAiChatModel"
-)
-public interface SeparateChatAssistant {
-    /**
-     * 分离聊天记录
-     * @param memoryId 聊天id
-     * @param userMessage 用户消息
-     * @return
-     */
+        chatModel = "qwenChatModel",
+        chatMemoryProvider = "chatMemoryProviderXiaozhi")
+public interface XiaozhiAgent {
     @SystemMessage(fromResource = "zhaozhi-prompt-template.txt")
-    String chat(@MemoryId int memoryId, @UserMessage String userMessage);
-
+    String chat(@MemoryId Long memoryId, @UserMessage String userMessage);
 }
