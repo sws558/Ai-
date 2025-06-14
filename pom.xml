@@ -82,6 +82,10 @@
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-document-parser-apache-pdfbox</artifactId>
         </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-pinecone</artifactId>
+        </dependency>
 
     </dependencies>
     <dependencyManagement>
@@ -110,6 +114,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
 
 
         </dependencies>
