@@ -11,7 +11,8 @@ import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
         wiringMode = EXPLICIT,
         chatModel = "openAiChatModel",
         chatMemoryProvider = "chatMemoryProviderXiaozhi",
-        tools="calculatorTools")
+        tools="appointmentTools",
+        contentRetriever = "contentRetrieverXiaozhi" )
 public interface XiaozhiAgent {
     @SystemMessage(fromResource = "zhaozhi-prompt-template.txt")
     String chat(@MemoryId Long memoryId, @UserMessage String userMessage);
