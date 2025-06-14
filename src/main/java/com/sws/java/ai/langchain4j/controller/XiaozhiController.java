@@ -19,7 +19,7 @@ public class XiaozhiController {
 
     @Operation(summary = "对话")
     @PostMapping("/chat")
-    public String chat(@RequestBody ChatForm chatForm) {
+    public Flux<String> chat(@RequestBody ChatForm chatForm) {
         return xiaozhiAgent.chat(chatForm.getMemoryId(), chatForm.getMessage());
     }
 }
